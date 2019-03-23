@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-
-p{
-  color:blue;
-}
-=======
   //css reset
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
     margin: 0;
@@ -14,4 +8,3 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     vertical-align: baseline;
     background: transparent;
   }
->>>>>>> 84109ac68729e71781528668c97df66807f91200
