@@ -5,6 +5,8 @@ class Navbar extends React.Component {
   render() {
     return <div className="topnav">
             <span><p id="icon"> OdderJobs</p></span>
+            <span><p id="icon"> Search</p></span>
+            <span><p id="icon"> Profile Picture</p></span>
 
 
             </div>
