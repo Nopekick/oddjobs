@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import {Link, Redirect, withRouter} from 'react-router-dom'
-import "../Signin/Signin.css"
-import {apiCall,setTokenHeader} from "../../services"
+import "../SignIn/signin.css"
+import {apiCall,setTokenHeader} from "../../service"
 import axios from 'axios'
+
 
 class Signup extends Component {
   constructor(props){
@@ -62,7 +63,6 @@ render(){
 }
 
 }
-
 
 export default withRouter(Signup);
 
