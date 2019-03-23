@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link, Redirect, withRouter} from 'react-router-dom'
-import "../SignIn/signin.css"
+import "./signup.css"
 import {apiCall,setTokenHeader} from "../../service"
 import axios from 'axios'
 
