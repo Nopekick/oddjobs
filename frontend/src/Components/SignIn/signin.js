@@ -9,8 +9,6 @@ class Signup extends Component {
   constructor(props){
     super(props)
     this.state = {
-      fname: '',
-      lname: '',
       email: '',
       password: ''
     }
@@ -25,17 +23,15 @@ handleSubmit(e){
   e.preventDefault()
   apiCall("post", "http://localhost:8081/api/auth/signup", this.state).then(({ token })=>{
     setTokenHeader(token)
-    //setTokenHeader()
     localStorage.jwtToken = token
     this.props.signIn()
-    this.props.history.push('/report')
+    this.props.history.push('/student')
     console.log(axios.defaults.headers.common)
   }).catch((err)=>{
     console.log(err)
     this.props.history.push('/')
   })
 }
-
 
 
 render(){
