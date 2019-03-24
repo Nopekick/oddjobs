@@ -32,7 +32,6 @@ exports.getMessages = async function(req, res, next){
   })
 }
 
-apiCall("post", "http://localhost:8081/api/m/employer/create")
 
 exports.getAllJobs = async function(req, res, next){
   db.Opening.find().populate('employer').exec()
