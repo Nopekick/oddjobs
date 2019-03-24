@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import {Switch, Route, withRouter} from 'react-router-dom'
 import Navbar from './Navbar/navbar'
-
 import Search from './Search/search'
 import SignIn from './SignIn/signin'
 import SignUp from './SignUp/signup'
 
 import Bottom from './bottom/bottom'
 import Homepage from './Homepage/homepage'
-
 
 import "../index.css"
 
