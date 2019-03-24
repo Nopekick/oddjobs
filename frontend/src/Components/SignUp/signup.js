@@ -78,11 +78,14 @@ render(){
             <label className="text">Password</label>
             <input className="input" onChange={this.handleChange} type = "password" name="password" placeholder="Password"/>
           </div>
-          <div className="line">
-            <select value={this.state.category} onChange={this.handleSelect} name = "category" placeholder="Category">
-              <option value='employer'>  Employer (in need of a worker/helper) </option>
-              <option value='worker'>  Worker (want a job, has skills to offer) </option>
-            </select>
+          <div id="selectdiv">
+            <label>
+              <select id="chooser">
+                <option selected> Select your position: </option>
+                <option> Employer </option>
+                <option> Employee </option>
+              </select>
+            </label>
           </div>
           { this.state.category == "worker" ? (
             <div>

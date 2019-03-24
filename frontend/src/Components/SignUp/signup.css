@@ -13,7 +13,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 400px;
+  height: 500px;
   width: 350px;
   background-color: whites;
   border-radius: 1%;
@@ -76,4 +76,34 @@ hr {
 #things {
   margin-top: 30px;
   color: black;
+}
+
+#selectdiv {
+  align-items: center;
+  margin-top: 20px;
+}
+
+#chooser::-ms-expand {
+  display: none;
+}
+
+#selectdiv select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  height: 30px;
+  float: right;
+  margin: 5px 0px;
+  padding: 0px 24px;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #333;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  -ms-word-break: normal;
+  word-break: normal;
 }
