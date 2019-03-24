@@ -6,7 +6,7 @@ import Search from './Search/search'
 import SignIn from './SignIn/signin'
 import SignUp from './SignUp/signup'
 import bottom from './bottom/bottom'
-import Homepage from '.Homepage/homepage'
+import Homepage from './Homepage/homepage'
 import "../index.css"
 
 class App extends Component {
