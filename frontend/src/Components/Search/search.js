@@ -12,18 +12,14 @@ class Search extends Component {
   }
 
  componentWillMount(){
-   apiCall("get", 'http://localhost:8081/api/m/jobs/all')
+   apiCall("get", `http://localhost:8081/api/m/jobs/all`)
    .then((jobs)=>{
      this.setState({jobs})
    })
  }
 
   render() {
-  this.state.jobs.map((job)=>{
-    return <div>
-        
-    </div>
-  })
+
 
   return (
     <div>

@@ -6,14 +6,8 @@ import SignIn from './SignIn/signin'
 import SignUp from './SignUp/signup'
 import Bottom from './Bottom/bottom'
 import Homepage from './Homepage/homepage'
-<<<<<<< HEAD
-import {setTokenHeader} from '../service.js'
-import "../index.css"
-=======
 import "../index.css"
 import {setTokenHeader} from "../service.js"
-
->>>>>>> 062482ca964ddf1aeedf6e2f053f5e616cf54149
 
 class App extends Component {
   constructor(props){
@@ -25,7 +19,6 @@ class App extends Component {
 
   userLoggedIn = () => {
     this.setState({ isAuthenticated: true})
-    console.log("user logged in")
   }
 
   logout = () => {
@@ -40,8 +33,9 @@ class App extends Component {
         <Navbar/>
         <Switch>
           <Route path="/signup" component={()=> <SignUp isAuthenticated={this.state.isAuthenticated} signIn={this.userLoggedIn} /> } />
-          <Route path="/signin" component={()=> <SignIn signIn={this.userLoggedIn} /> } />
-          <Route path="/job-openings" component={()=> <Search  />} />
+          <Route path="/signin" component={()=> <SignIn /> } />
+          <Route path="/students" component={()=> <Search category="student" />} />
+          <Route path="/employers" component={()=> <Search category="employer" />} />
           <Route path="/" component={()=> <Homepage  />} />
         </Switch>
         <Bottom/>
