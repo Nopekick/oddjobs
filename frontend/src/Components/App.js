@@ -4,9 +4,8 @@ import Navbar from './Navbar/navbar'
 import Search from './Search/search'
 import SignIn from './SignIn/signin'
 import SignUp from './SignUp/signup'
-import Bottom from './bottom/bottom'
+import Bottom from './Bottom/bottom'
 import Homepage from './Homepage/homepage'
-
 import "../index.css"
 import {setTokenHeader} from "../service.js"
 
@@ -20,7 +19,6 @@ class App extends Component {
 
   userLoggedIn = () => {
     this.setState({ isAuthenticated: true})
-    console.log("user logged in")
   }
 
   logout = () => {
@@ -35,8 +33,9 @@ class App extends Component {
         <Navbar/>
         <Switch>
           <Route path="/signup" component={()=> <SignUp isAuthenticated={this.state.isAuthenticated} signIn={this.userLoggedIn} /> } />
-          <Route path="/signin" component={()=> <SignIn signIn={this.userLoggedIn} /> } />
-          <Route path="/job-openings" component={()=> <Search  />} />
+          <Route path="/signin" component={()=> <SignIn /> } />
+          <Route path="/students" component={()=> <Search category="student" />} />
+          <Route path="/employers" component={()=> <Search category="employer" />} />
           <Route path="/" component={()=> <Homepage  />} />
         </Switch>
         <Bottom/>
