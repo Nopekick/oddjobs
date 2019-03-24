@@ -5,10 +5,6 @@ import {Link} from 'react-router-dom'
 
 class Navbar extends React.Component {
   render() {
-<<<<<<< HEAD
-
-=======
->>>>>>> 824bdace8715af84b6c6776b2aaf06baa346db5f
           return <div className="topnav">
                   <img className="image" src={ require('./otter-md.png') } alt="otter you glad you chose us"/>
                   <Link to="/"> OdderJobs </Link>
