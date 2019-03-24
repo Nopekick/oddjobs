@@ -5,8 +5,12 @@ import Navbar from './Navbar/navbar'
 import Search from './Search/search'
 import SignIn from './SignIn/signin'
 import SignUp from './SignUp/signup'
+import Homepage from "./Homepage/homepage"
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5f21d8d0e2dfca5c067a4f96e99eb6312ea0ddae
 import "../index.css"
 
 class App extends Component {
@@ -26,6 +30,7 @@ class App extends Component {
           <Route path="/signin" component={()=> <SignIn /> } />
           <Route path="/students" component={()=> <Search category="student" />} />
           <Route path="/employers" component={()=> <Search category="employer" />} />
+          <Route path="/" component={()=> <Homepage  />} />
         </Switch>
       </div>
     );

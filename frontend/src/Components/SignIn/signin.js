@@ -38,5 +38,31 @@ handleSubmit(e){
 
 
 
+render(){
+  return (
+    <div id="signups">
+        <h1 id="signup"> Sign In </h1>
+        <form onSubmit={this.handleSubmit}>
+        <div id="forms">
+          <div className="line">
+            <label className="text">Email</label>
+            <input className="input" onChange={this.handleChange} type = "text" name="email" placeholder="Email"/>
+          </div>
+          <hr/>
+          <div className="line">
+            <label className="text">Password</label>
+            <input className="input" onChange={this.handleChange} type = "password" name="password" placeholder="Password"/>
+          </div>
 
-export default Signin;
+          <button id="submit" type="submit">Sign In </button>
+          <span id="things">Dont have an account? </span>
+          <Link id="link1" to="/signup">Sign up</Link>
+        </div>
+        </form>
+    </div>
+ )
+}
+
+}
+
+export default withRouter(Signup);
