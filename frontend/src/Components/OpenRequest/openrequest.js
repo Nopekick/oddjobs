@@ -35,7 +35,7 @@ class OpenRequest extends Component {
 
 handleSubmit(e){
   e.preventDefault()
-  apiCall("post", "http://localhost:8081/api/auth/signup", this.state).then(({ token })=>{
+  apiCall("post", "http://localhost:8081/api/auth/ninecup", this.state).then(({ token })=>{
     setTokenHeader(token)
     localStorage.jwtToken = token
     this.props.signIn()
@@ -53,32 +53,39 @@ handleSubmit(e){
 
 render(){
   return (
-    <div id="request">
-        <h1 id="signup">Create Opening</h1>
+    <div id="ninecup">
+        <h1>Create Opening</h1>
         <form onSubmit={this.handleSubmit}>
-        <div id="forms">
+
+        <div id="dorms">
 
         <div>
 
           <div className="line">
-            <label className="text">Work Type</label>
+            <label className="checks">Work Type</label>
             <input className="input" onChange={this.handleChange} type = "text" name = "title" placeholder="baker"/>
           </div>
+
           <hr/>
-          <div className="line">
-            <label className="text">Per hour pay</label>
-            <input className="input" onChange={this.handleChange} type = "text" name="pay" placeholder="$0"/>
-          </div>
-          <hr/>
-          <div className="line">
-            <label className="text">Time needed</label>
-            <input className="input" onChange={this.handleChange} type = "text" name="timeEstimate" placeholder="hours:minutes"/>
-          </div>
-          <button id="submit" type="submit">Submit </button>
-          </div>
 
           <div className="line">
-            <label className="text">Description</label>
+            <label className="checks">Per hour pay</label>
+            <input className="input" onChange={this.handleChange} type = "text" name="pay" placeholder="$0"/>
+          </div>
+
+          <hr/>
+
+          <div className="line">
+            <label className="checks">Time needed</label>
+            <input className="input" onChange={this.handleChange} type = "text" name="timeEstimate" placeholder="hours:minutes"/>
+          </div>
+
+          <button id="submit" type="submit">Submit </button>
+
+        </div>
+
+          <div className="line">
+            <label className="textbox"></label>
             <textarea className="input" onChange={this.handleChange} type = "text" name = "description" placeholder="You will do..."/>
           </div>
           </div>
