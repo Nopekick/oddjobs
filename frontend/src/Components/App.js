@@ -4,6 +4,22 @@ import Navbar from './Navbar/navbar'
 import Search from './Search/search'
 import SignIn from './SignIn/signin'
 import SignUp from './SignUp/signup'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+import Bottom from './bottom/bottom'
+import Homepage from './Homepage/homepage'
+
+=======
+<<<<<<< HEAD
+=======
+import Homepage from "./Homepage/homepage"
+>>>>>>> a2deee0da45485ff29d3f75e7263a0aaf92c0201
+>>>>>>> 0cd0cfe6a36df4e780a51ed8a3183ebe23da1d29
+>>>>>>> e0bd85b5f5e806220dae7bcf7c7b4d4143f4262b
 import bottom from './bottom/bottom'
 import Homepage from './Homepage/homepage'
 import "../index.css"
