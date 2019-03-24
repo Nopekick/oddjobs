@@ -32,6 +32,8 @@ exports.getMessages = async function(req, res, next){
   })
 }
 
+apiCall("post", "http://localhost:8081/api/m/employer/create")
+
 exports.getAllJobs = async function(req, res, next){
   db.Opening.find().populate('employer').exec()
   .then((jobs)=>{
@@ -45,6 +47,14 @@ exports.getAllEmployers = async function(req, res, next){
   db.User.find({category: 'Employer'})
   .then((employers)=>{
     return res.status(200).json({employers})
+  }).catch((err)=>{
+      next({message: err, status: 400})
+  })
+}
+
+exports.createOpening = async function(req, res, next){
+  db.Opening.create(req.body).then((opening)=>{
+    return res.status(200).json({Message: 'created job opening'})
   }).catch((err)=>{
       next({message: err, status: 400})
   })

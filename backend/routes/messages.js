@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const {sendMessage, getUserInfo, getMessages, getAllJobs, getAllEmployers} = require("../helpers/messages")
+const {sendMessage, getUserInfo, getMessages, getAllJobs, getAllEmployers, createOpening} = require("../helpers/messages")
 
 router.post("/send/:recipientId", sendMessage)
 router.get("/users/:id", getUserInfo)
@@ -9,6 +9,7 @@ router.get("/users/:id/messages", getMessages)
 
 router.get("/employer/all", getAllEmployers)
 router.get("/jobs/all", getAllJobs)
+router.post("/employer/create", createOpening)
 
 
 module.exports = router;
