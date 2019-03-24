@@ -21,11 +21,13 @@ class Signup extends Component {
 
 handleSubmit(e){
   e.preventDefault()
-  apiCall("post", "http://localhost:8081/api/auth/signup", this.state).then(({ token })=>{
+  apiCall("post", "http://localhost:8081/api/auth/signin", this.state).then(({ token })=>{
     setTokenHeader(token)
     localStorage.jwtToken = token
     this.props.signIn()
-    this.props.history.push('/student')
+    console.log("signed in")
+    console.log(token)
+    this.props.history.push('/job-openings')
     console.log(axios.defaults.headers.common)
   }).catch((err)=>{
     console.log(err)

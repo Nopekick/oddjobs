@@ -19,6 +19,7 @@ class App extends Component {
 
   userLoggedIn = () => {
     this.setState({ isAuthenticated: true})
+    console.log("user logged in")
   }
 
   logout = () => {
@@ -33,9 +34,8 @@ class App extends Component {
         <Navbar/>
         <Switch>
           <Route path="/signup" component={()=> <SignUp isAuthenticated={this.state.isAuthenticated} signIn={this.userLoggedIn} /> } />
-          <Route path="/signin" component={()=> <SignIn /> } />
-          <Route path="/students" component={()=> <Search category="student" />} />
-          <Route path="/employers" component={()=> <Search category="employer" />} />
+          <Route path="/signin" component={()=> <SignIn signIn={this.userLoggedIn} /> } />
+          <Route path="/job-openings" component={()=> <Search  />} />
           <Route path="/" component={()=> <Homepage  />} />
         </Switch>
         <Bottom/>
