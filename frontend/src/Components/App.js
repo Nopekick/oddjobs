@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Navbar from './Navbar/navbar'
 import SignUp from './SignUp/signup'
+import Homepage from './Homepage/homepage'
 import "../index.css"
 
 class App extends Component {
@@ -9,7 +10,7 @@ class App extends Component {
 
       <div>
         <Navbar/>
-        <SignUp/>
+        <Homepage/>
       </div>
     );
   }
