@@ -65,6 +65,11 @@ hr {
   background-color: black;
   font-size: 100%;
   font-weight: 500;
+  transition: all .1s ease-in-out;
+}
+
+#submit:hover {
+  transform: scale(1.02);
 }
 
 #link1 {

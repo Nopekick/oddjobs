@@ -32,10 +32,10 @@ exports.getMessages = async function(req, res, next){
   })
 }
 
-exports.getAllStudents = async function(req, res, next){
-  db.User.find({category: 'Student'})
-  .then((students)=>{
-    return res.status(200).json({students})
+exports.getAllJobs = async function(req, res, next){
+  db.Opening.find()
+  .then((jobs)=>{
+    return res.status(200).json({jobs})
   }).catch((err)=>{
       next({message: err, status: 400})
   })

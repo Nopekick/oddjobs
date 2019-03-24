@@ -40,10 +40,11 @@ handleSubmit(e){
   e.preventDefault()
   apiCall("post", "http://localhost:8081/api/auth/signup", this.state).then(({ token })=>{
     setTokenHeader(token)
-    //setTokenHeader()
     localStorage.jwtToken = token
     this.props.signIn()
-    this.props.history.push('/employers')
+    console.log("signed in")
+    console.log(token)
+    this.props.history.push('/job-openings')
     console.log(axios.defaults.headers.common)
   }).catch((err)=>{
     console.log(err)
@@ -81,22 +82,26 @@ render(){
           <div id="selectdiv">
             <label>
               <select value={this.state.category} onChange={this.handleSelect} name="category" id="chooser">
-                <option selected> Select your position: </option>
+                <option> Select your position: </option>
                 <option value="employer"> Employer </option>
+<<<<<<< HEAD
                 <option value="worker"> Employee </option>
+=======
+                <option value="student"> Employee </option>
+>>>>>>> 062482ca964ddf1aeedf6e2f053f5e616cf54149
               </select>
             </label>
           </div>
-          { this.state.category == "worker" ? (
+          { this.state.category == "student" ? (
             <div>
               <div className="line">
-                <label className="text">Your interests</label>
-                <input className="input" onChange={this.handleChange} type = "text" name="interest" placeholder="interests"/>
+                <label className="text"> Interests</label>
+                <input className="input" onChange={this.handleChange} type = "text" name="interest" placeholder="Interests"/>
               </div>
               <hr/>
               <div className="line">
-                <label className="text">Desirable Jobs</label>
-                <input className="input" onChange={this.handleChange} type = "text" name="wantJobs" placeholder="cleaning, dog walking, etc."/>
+                <label className="text">Desired Jobs</label>
+                <input className="input" onChange={this.handleChange} type = "text" name="wantJobs" placeholder="Ex: Clean, Walk Dogs..."/>
               </div>
             </div>
             ) : null}

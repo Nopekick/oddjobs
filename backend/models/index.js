@@ -6,3 +6,4 @@ mongoose.connect("mongodb://lahuser:user101@ds115701.mlab.com:15701/lah", { useN
 
 module.exports.User = require("./user")
 module.exports.Message = require("./message")
+module.exports.Opening = require("./opening")
