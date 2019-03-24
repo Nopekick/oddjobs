@@ -64,9 +64,7 @@ render(){
             <input className="input" onChange={this.handleChange} type = "password" name="password" placeholder="Password"/>
           </div>
 
-          <div id="button">
-            <button id="submit" type="submit">Sign Up </button>
-          </div>
+          <button id="submit" type="submit">Sign Up </button>
           <p>Already have an account? <Link to="/signin">Sign in</Link></p>
         </div>
         </form>
