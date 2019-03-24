@@ -84,7 +84,11 @@ render(){
               <select value={this.state.category} onChange={this.handleSelect} name="category" id="chooser">
                 <option> Select your position: </option>
                 <option value="employer"> Employer </option>
+<<<<<<< HEAD
+                <option value="worker"> Employee </option>
+=======
                 <option value="student"> Employee </option>
+>>>>>>> 062482ca964ddf1aeedf6e2f053f5e616cf54149
               </select>
             </label>
           </div>
