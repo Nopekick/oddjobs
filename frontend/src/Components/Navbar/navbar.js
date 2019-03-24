@@ -11,7 +11,7 @@ class Navbar extends React.Component {
                   <Link to="/about"> About us </Link>
                   <Link to="/signin"> Sign in </Link>
                   <Link to="/signup"> Sign up </Link>
-                <img className="profilePic" src="" alt=""/>
+                  <img className="profilePic" src="" alt=""/>
                 </div>
   }
 }
