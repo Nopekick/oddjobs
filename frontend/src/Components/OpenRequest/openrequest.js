@@ -13,39 +13,29 @@ class OpenRequest extends Component {
       description: '',
       pay: '',
       timeEstimate: '',
+      cat: ''
     }
     this.handleSubmit = this.handleSubmit.bind(this)
-  }
-
-  componentWillMount(){
-      if(this.props.isAuthenticated === true){
-        this.props.history.push("/report")
-      }
   }
 
   handleChange = (e) => {
     this.setState({[e.target.name]: e.target.value})
   }
 
-  handleSelect = (e) => {
-    this.setState({category: e.target.value}, function(){
-      console.log(this.state)
-    })
-  }
 
 handleSubmit(e){
   e.preventDefault()
-  apiCall("post", "http://localhost:8081/api/auth/signup", this.state).then(({ token })=>{
-    setTokenHeader(token)
-    localStorage.jwtToken = token
-    this.props.signIn()
-    console.log("signed in")
-    console.log(token)
-    this.props.history.push('/job-openings')
-    console.log(axios.defaults.headers.common)
+  apiCall("post", "http://localhost:8081/api/m/employer/create", this.state).then(()=>{
+    this.props.history.push("/job-openings")
   }).catch((err)=>{
     console.log(err)
-    this.props.history.push('/')
+    this.props.history.push('/job-openings')
+  })
+}
+
+handleSelect = (e) => {
+  this.setState({category: e.target.value}, function(){
+    console.log(this.state)
   })
 }
 
@@ -53,33 +43,51 @@ handleSubmit(e){
 
 render(){
   return (
-    <div id="request">
-        <h1 id="signup">Create Opening</h1>
+    <div id="ninecup">
+        <h1>Create Opening</h1>
         <form onSubmit={this.handleSubmit}>
-        <div id="forms">
+
+        <div id="dorms">
 
         <div>
 
           <div className="line">
-            <label className="text">Work Type</label>
+            <label className="checks">Work Type</label>
             <input className="input" onChange={this.handleChange} type = "text" name = "title" placeholder="baker"/>
           </div>
+
           <hr/>
-          <div className="line">
-            <label className="text">Per hour pay</label>
-            <input className="input" onChange={this.handleChange} type = "text" name="pay" placeholder="$0"/>
-          </div>
-          <hr/>
-          <div className="line">
-            <label className="text">Time needed</label>
-            <input className="input" onChange={this.handleChange} type = "text" name="timeEstimate" placeholder="hours:minutes"/>
-          </div>
-          <button id="submit" type="submit">Submit </button>
-          </div>
 
           <div className="line">
-            <label className="text">Description</label>
-            <textarea className="input" onChange={this.handleChange} type = "text" name = "description" placeholder="You will do..."/>
+            <label className="checks">Per hour pay</label>
+            <input className="input" onChange={this.handleChange} type = "text" name="pay" placeholder="$0"/>
+          </div>
+
+          <hr/>
+
+          <div className="line">
+            <label className="checks">Time needed</label>
+            <input className="input" onChange={this.handleChange} type = "text" name="timeEstimate" placeholder="hours:minutes"/>
+          </div>
+
+          <hr />
+
+          <div>
+            <label> Type   </label>
+              <select style={{'width': '130px', 'height': '25px', 'border': '1px solid black', 'border-radius': '0px', 'margin-left': '114px'}} value={this.state.category} onChange={this.handleSelect} name="category" id="chooser">
+                <option value="volunteering"> Volunteering </option>
+                <option value="internship"> Internship </option>
+                <option value="odd job"> Odd job </option>
+              </select>
+
+          </div>
+
+          <button id="submit" type="submit">Submit </button>
+
+        </div>
+
+          <div className="line">
+            <textarea className="textbox" onChange={this.handleChange} type = "text" name = "description" placeholder="You will do..."/>
           </div>
           </div>
 
