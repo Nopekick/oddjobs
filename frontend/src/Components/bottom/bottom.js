@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 
 class bottom extends React.Component {
   render() {
-          return <div className="bottom">By Thomas Kamm, Josh Lawson, and Scott Lin</div>
+          return <div className="bottom">Created by Thomas Kamm, Josh Lawson, and Scott Lin</div>
   }
 }
 export default bottom;
