@@ -3,19 +3,19 @@ const db = require('../models');
 
 //body should contain sender name, sender email, content, recipient name
 exports.sendMessage = async function(req, res, next){
-  let message = db.Message.create({req.body})
-  db.User.findById({req.params.recipientId})
+  let message = db.Message.create(req.body)
+  db.User.findById(req.params.recipientId)
   .then((user)=>{
     user.inbox.push(message)
     user.save()
-    return res.status(200).json({'Message Sent'})
+    return res.status(200).json({'Message': 'Message Sent'})
   }).catch((err)=>{
       next({message: err, status: 400})
   })
 }
 
 exports.getUserInfo = async function(req, res, next){
-  db.User.findById({req.params.id})
+  db.User.findById(req.params.id)
   .then((user)=>{
     return res.status(200).json({user})
   }).catch((err)=>{
@@ -24,9 +24,9 @@ exports.getUserInfo = async function(req, res, next){
 }
 
 exports.getMessages = async function(req, res, next){
-  db.User.findById({req.params.id}).populate('inbox').exec()
+  db.User.findById(req.params.id).populate('inbox').exec()
   .then((user)=>{
-    return res.status(200).json({user.inbox})
+    return res.status(200).json({user: user.inbox})
   }).catch((err)=>{
       next({message: err, status: 400})
   })
