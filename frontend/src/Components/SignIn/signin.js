@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-import React, {Component} from 'react'
-
-class Signin extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-
-    }
-  }
-
-  render() {
-  return (
-    <div>
-
-    </div>
-    );
-  }
-=======
 import React, {Component} from 'react';
 import {Link, Redirect, withRouter} from 'react-router-dom'
 import "./signin.css"
@@ -53,41 +34,9 @@ handleSubmit(e){
     console.log(err)
     this.props.history.push('/')
   })
->>>>>>> efbbb1985048b9031504d72b45ce9d23056cb295
 }
 
 
 
-<<<<<<< HEAD
 
 export default Signin;
-=======
-render(){
-  return (
-    <div id="signups">
-        <h1 id="signup"> Sign In </h1>
-        <form onSubmit={this.handleSubmit}>
-        <div id="forms">
-          <div className="line">
-            <label className="text">Email</label>
-            <input className="input" onChange={this.handleChange} type = "text" name="email" placeholder="Email"/>
-          </div>
-          <hr/>
-          <div className="line">
-            <label className="text">Password</label>
-            <input className="input" onChange={this.handleChange} type = "password" name="password" placeholder="Password"/>
-          </div>
-
-          <button id="submit" type="submit">Sign In </button>
-          <span id="things">Dont have an account? </span>
-          <Link id="link1" to="/signup">Sign up</Link>
-        </div>
-        </form>
-    </div>
- )
-}
-
-}
-
-export default withRouter(Signup);
->>>>>>> efbbb1985048b9031504d72b45ce9d23056cb295
