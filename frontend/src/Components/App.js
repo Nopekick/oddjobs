@@ -5,8 +5,13 @@ import Navbar from './Navbar/navbar'
 import Search from './Search/search'
 import SignIn from './SignIn/signin'
 import SignUp from './SignUp/signup'
+<<<<<<< HEAD
 import Homepage from "./Homepage/homepage"
 
+=======
+import bottom from './bottom/bottom'
+import Homepage from './Homepage/homepage'
+>>>>>>> 16fdd06ca0f4ff0eb203c23ea541951893e59b7a
 import "../index.css"
 
 class App extends Component {
