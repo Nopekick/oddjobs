@@ -4,7 +4,7 @@ const messageSchema = new mongoose.Schema({
   sender: {
     type: String
   },
-  recipient: {
+  senderEmail: {
     type: String
   },
   content: {
