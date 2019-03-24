@@ -12,13 +12,20 @@ class Signup extends Component {
       fname: '',
       lname: '',
       email: '',
-      password: ''
+      password: '',
+      category: ''
     }
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleChange = (e) => {
     this.setState({[e.target.name]: e.target.value})
+  }
+
+  handleSelect = (e) => {
+    this.setState({category: e.target.value}, function(){
+      console.log(this.state)
+    })
   }
 
 handleSubmit(e){
@@ -62,6 +69,12 @@ render(){
           <div className="line">
             <label className="text">Password</label>
             <input className="input" onChange={this.handleChange} type = "password" name="password" placeholder="Password"/>
+          </div>
+          <div className="line">
+            <select value={this.state.category} onChange={this.handleSelect} name = "category" placeholder="Category">
+              <option value='employer'>  Employer (in need of a worker/helper) </option>
+              <option value='worker'>  Worker (want a job, has skills to offer) </option>
+            </select>
           </div>
 
           <button id="submit" type="submit">Sign Up </button>
