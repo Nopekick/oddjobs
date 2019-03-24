@@ -85,8 +85,7 @@ render(){
         </div>
 
           <div className="line">
-            <label className="textbox"></label>
-            <textarea className="input" onChange={this.handleChange} type = "text" name = "description" placeholder="You will do..."/>
+            <textarea className="textbox" onChange={this.handleChange} type = "text" name = "description" placeholder="You will do..."/>
           </div>
           </div>
 
