@@ -5,9 +5,7 @@ import {Link} from 'react-router-dom'
 
 class bottom extends React.Component {
   render() {
-          return <div className="bottom">
-          <div>By Thomas, Josh, and Scott</div>
-          </div>
+          return <div className="bottom">By , Josh, and Scott</div>
   }
 }
 export default bottom;
