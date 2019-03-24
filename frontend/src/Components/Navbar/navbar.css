@@ -21,10 +21,6 @@ font: inherit;
 vertical-align: baseline;
 }
 .topnav{
-  background-color: #f0ead6;
-  overflow: hidden;
-  display: flex;
-  justify-content: space-around;
   height: 40px;
   font-size:20px;
 
@@ -33,10 +29,15 @@ a{
   margin: 0;
   text-decoration: none;
   float: left;
-  color: white;
+  color: black;
   text-align: center;
+  display: flex;
 
 }
-Odder{
+odder{
   text-align: left;
+}
+.image{
+  height: 100px;
+  length: 100px;
 }
