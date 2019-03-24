@@ -22,8 +22,9 @@ vertical-align: baseline;
 }
 .topnav{
   height: 40px;
-  font-size:20px;
-
+  font-size:30px;
+  display: flex;
+  text-align: center;
 }
 a{
   margin: 0;
@@ -31,13 +32,12 @@ a{
   float: left;
   color: black;
   text-align: center;
-  display: flex;
 
 }
-odder{
-  text-align: left;
+.oddertext{
+  padding-left: 2px;
 }
 .image{
-  height: 100px;
-  length: 100px;
+  height: 150px;
+  length: 150px;
 }
