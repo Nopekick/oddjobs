@@ -13,7 +13,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 500px;
+  height: 400px;
   width: 350px;
   background-color: whites;
   border-radius: 1%;
@@ -59,14 +59,21 @@ hr {
   border-radius: 6px;
   border: 1px solid black;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 30px;
   width: 120px;
+  height: 100px;
   color: white;
   background-color: black;
   font-size: 100%;
   font-weight: 500;
 }
 
+#link1 {
+  color: black;
+  float: left;
+}
+
 #things {
-  color: blue;
+  margin-top: 30px;
+  color: black;
 }
