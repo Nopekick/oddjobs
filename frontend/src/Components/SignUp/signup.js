@@ -65,7 +65,7 @@ render(){
           </div>
 
           <button id="submit" type="submit">Sign Up </button>
-          <p>Already have an account? <Link to="/signin">Sign in</Link></p>
+          <p id="things">Already have an account? <Link to="/signin">Sign in</Link></p>
         </div>
         </form>
     </div>
