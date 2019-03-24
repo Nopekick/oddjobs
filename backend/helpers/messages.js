@@ -33,7 +33,7 @@ exports.getMessages = async function(req, res, next){
 }
 
 exports.getAllJobs = async function(req, res, next){
-  db.Opening.find()
+  db.Opening.find().populate('employer').exec()
   .then((jobs)=>{
     return res.status(200).json({jobs})
   }).catch((err)=>{
