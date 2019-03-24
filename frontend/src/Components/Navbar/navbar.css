@@ -21,11 +21,13 @@ font: inherit;
 vertical-align: baseline;
 }
 .topnav{
-  background-color: black;
+  background-color: #f0ead6;
   overflow: hidden;
-  margin-top: -10;
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   height: 40px;
+  font-size:20px;
 
 }
 a{
@@ -36,6 +38,7 @@ a{
   text-align: center;
 
 }
-.Search{
-  text-align: right;
+
+#odder{
+  text-align: left;
 }
