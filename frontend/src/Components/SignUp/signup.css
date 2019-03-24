@@ -18,6 +18,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   background-color: whites;
   border-radius: 1%;
   border: 1px solid black;
+  margin: auto;
 }
 
 .line {
@@ -27,13 +28,17 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 #forms {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   height: 100px;
   width: 300px;
 
 }
 
-hl {
+hr {
   color: black;
+  width: 100%;
 }
 
 .text {
@@ -45,7 +50,15 @@ hl {
   margin-right: 10px;
 }
 
-#button {
-  display: flex;
-  align-items: center;
+#submit {
+  align-self: center;
+  background-color: inherit;
+  border-radius: 5%;
+  border: 1px solid black;
+  margin: auto;
+  margin-top: 20px;
+  width: 120px;
+  height: 40px;
+  color: white;
+  background-color: black;
 }
