@@ -13,9 +13,17 @@ class Signup extends Component {
       lname: '',
       email: '',
       password: '',
-      category: ''
+      category: '',
+      interest: '',
+      wantJobs: ''
     }
     this.handleSubmit = this.handleSubmit.bind(this)
+  }
+
+  componentWillMount(){
+      if(this.props.isAuthenticated === true){
+        this.props.history.push("/report")
+      }
   }
 
   handleChange = (e) => {
@@ -35,7 +43,7 @@ handleSubmit(e){
     //setTokenHeader()
     localStorage.jwtToken = token
     this.props.signIn()
-    this.props.history.push('/report')
+    this.props.history.push('/employers')
     console.log(axios.defaults.headers.common)
   }).catch((err)=>{
     console.log(err)
@@ -72,13 +80,35 @@ render(){
           </div>
           <div id="selectdiv">
             <label>
+<<<<<<< HEAD
               <select id="chooser">
                 <option selected> Select your role: </option>
                 <option> Employer </option>
                 <option> Employee </option>
+=======
+              <select value={this.state.category} onChange={this.handleSelect} name="category" id="chooser">
+                <option selected> Select your position: </option>
+                <option value="employer"> Employer </option>
+                <option value="worker"> Employee </option>
+>>>>>>> df4d52b5d429a4bc5397879f7ec524cc2a7c2a1c
               </select>
             </label>
           </div>
+          { this.state.category == "worker" ? (
+            <div>
+              <div className="line">
+                <label className="text">Your interests</label>
+                <input className="input" onChange={this.handleChange} type = "text" name="interest" placeholder="interests"/>
+              </div>
+              <hr/>
+              <div className="line">
+                <label className="text">Desirable Jobs</label>
+                <input className="input" onChange={this.handleChange} type = "text" name="wantJobs" placeholder="cleaning, dog walking, etc."/>
+              </div>
+            </div>
+            ) : null}
+
+
 
           <button id="submit" type="submit">Sign Up </button>
           <span id="things">Already have an account? </span>

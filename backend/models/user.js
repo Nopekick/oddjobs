@@ -21,13 +21,10 @@ const userSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Message'
   }],
-  bio: {
-    type: String
-  },
   interest: {
     type: String
   },
-  lookingFor: {
+  wantJobs: {
     type: String
   },
   email: {
