@@ -21,22 +21,23 @@ font: inherit;
 vertical-align: baseline;
 }
 .topnav{
-  background-color: #f0ead6;
-  overflow: hidden;
-  display: flex;
-  justify-content: space-around;
   height: 40px;
-  font-size:20px;
-
+  font-size:30px;
+  display: flex;
+  text-align: center;
 }
 a{
   margin: 0;
   text-decoration: none;
   float: left;
-  color: white;
+  color: black;
   text-align: center;
 
 }
-Odder{
-  text-align: left;
+.oddertext{
+  padding-left: 2px;
+}
+.image{
+  height: 60px;
+  length: 60px;
 }
