@@ -25,7 +25,6 @@ vertical-align: baseline;
   overflow: hidden;
   display: flex;
   justify-content: space-around;
-  align-items: center;
   height: 40px;
   font-size:20px;
 
@@ -38,7 +37,6 @@ a{
   text-align: center;
 
 }
-
-#odder{
+Odder{
   text-align: left;
 }
