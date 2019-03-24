@@ -7,15 +7,8 @@
   min-width:300px;
 }
 a{
-  margin: 0;
   text-decoration: none;
-  float: left;
   color: black;
-  text-align: center;
-
-}
-.oddertext{
-  padding-left: 2px;
 }
 .image{
   height: 60px;
