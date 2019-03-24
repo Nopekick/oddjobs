@@ -46,25 +46,27 @@ render(){
         <div id="forms">
           <div className="line">
             <label className="text">First Name</label>
-            <input onChange={this.handleChange} type = "text" name = "fname" placeholder="First Name"/>
+            <input className="input" onChange={this.handleChange} type = "text" name = "fname" placeholder="First Name"/>
           </div>
           <hr/>
           <div className="line">
             <label className="text">Last Name</label>
-            <input onChange={this.handleChange} type = "text" name = "lname" placeholder="Enter your last name..."/>
+            <input className="input" onChange={this.handleChange} type = "text" name = "lname" placeholder="Last Name"/>
           </div>
           <hr/>
           <div className="line">
             <label className="text">Email</label>
-            <input onChange={this.handleChange} type = "text" name="email" placeholder="email"/>
+            <input className="input" onChange={this.handleChange} type = "text" name="email" placeholder="Email"/>
           </div>
           <hr/>
           <div className="line">
             <label className="text">Password</label>
-            <input onChange={this.handleChange} type = "password" name="password" placeholder="password"/>
+            <input className="input" onChange={this.handleChange} type = "password" name="password" placeholder="Password"/>
           </div>
 
-          <button type="submit">Sign Up </button>
+          <div id="button">
+            <button id="submit" type="submit">Sign Up </button>
+          </div>
           <p>Already have an account? <Link to="/signin">Sign in</Link></p>
         </div>
         </form>

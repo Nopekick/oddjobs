@@ -14,24 +14,38 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   display: flex;
   flex-direction: column;
   height: 500px;
-  width: 400px;
+  width: 350px;
   background-color: whites;
   border-radius: 1%;
   border: 1px solid black;
 }
 
 .line {
+  display: flex;
+  width: 300px;
   justify-content: space-between;
 }
 
 #forms {
-  align-items: center;
-  justify-content: center;
   height: 100px;
   width: 300px;
 
 }
 
+hl {
+  color: black;
+}
+
 .text {
+  margin-left: 10px;
   font-size: 120%;
+}
+
+.input {
+  margin-right: 10px;
+}
+
+#button {
+  display: flex;
+  align-items: center;
 }
