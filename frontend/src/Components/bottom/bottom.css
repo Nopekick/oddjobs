@@ -21,7 +21,7 @@ vertical-align: baseline;
 }
 .bottom{
   height: 50px;
+  width: 10px;
   color: black;
-  bottom: 0px;
   display: flex;
 }
