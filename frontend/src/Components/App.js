@@ -6,7 +6,22 @@ import SignIn from './SignIn/signin'
 import SignUp from './SignUp/signup'
 import Bottom from './Bottom/bottom'
 import Homepage from './Homepage/homepage'
+<<<<<<< HEAD
 import {setTokenHeader} from "../service.js"
+=======
+<<<<<<< HEAD
+=======
+import "../index.css"
+<<<<<<< HEAD
+=======
+>>>>>>> 935de13a9983f1f478b69dee6e7cfdebe50ad027
+=======
+import Bottom from './bottom/bottom'
+import Homepage from './Homepage/homepage'
+import {setTokenHeader} from "../service.js"
+>>>>>>> df4d52b5d429a4bc5397879f7ec524cc2a7c2a1c
+>>>>>>> 45471f25b9cfcf67c8770a66c63abd81fc556927
+>>>>>>> 7ea241e2c8d6222304793115dec239fc131b1b5a
 
 
 class App extends Component {
