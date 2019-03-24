@@ -8,9 +8,11 @@ class Navbar extends React.Component {
     return  <div className="topnav">
               <div className="odder">
               <Link to="/"> OdderJobs </Link>
+              <Link to="/signin"> Sign In </Link>
+              <Link to="/signup"> Sign Up </Link>
               </div>
               <a>Search</a>
-              <Link to="Profile"><img src="" alt="."/></Link>
+              <Link to="/profile"><img src="" alt="."/></Link>
             </div>
 
   }
