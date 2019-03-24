@@ -23,16 +23,18 @@ vertical-align: baseline;
 .topnav{
   background-color: black;
   overflow: hidden;
-  margin-top: 0;
+  margin-top: -10;
   display: flex;
   height: 40px;
+
 }
 a{
+  margin: 0;
   text-decoration: none;
   float: left;
   color: white;
   text-align: center;
-  display:
+
 }
 #profile{
   text-align: right;
