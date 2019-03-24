@@ -91,13 +91,13 @@ render(){
           { this.state.category == "student" ? (
             <div>
               <div className="line">
-                <label className="text">Your interests</label>
-                <input className="input" onChange={this.handleChange} type = "text" name="interest" placeholder="interests"/>
+                <label className="text"> Interests</label>
+                <input className="input" onChange={this.handleChange} type = "text" name="interest" placeholder="Interests"/>
               </div>
               <hr/>
               <div className="line">
-                <label className="text">Desirable Jobs</label>
-                <input className="input" onChange={this.handleChange} type = "text" name="wantJobs" placeholder="cleaning, dog walking, etc."/>
+                <label className="text">Desired Jobs</label>
+                <input className="input" onChange={this.handleChange} type = "text" name="wantJobs" placeholder="Ex: Clean, Walk Dogs..."/>
               </div>
             </div>
             ) : null}

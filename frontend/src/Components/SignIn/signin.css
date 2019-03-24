@@ -34,7 +34,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   flex-direction: column;
   height: 100px;
   width: 300px;
-
 }
 
 hr {
@@ -66,10 +65,15 @@ hr {
   background-color: black;
   font-size: 100%;
   font-weight: 500;
+  transition: all .1s ease-in-out;
+}
+
+#submit:hover {
+  transform: scale(1.02);
 }
 
 #link1 {
-  color: black;
+  color: #0b3b89;
   float: left;
 }
 

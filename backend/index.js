@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require("body-parser")
 const mongoose = require("mongoose")
 const cors = require("cors")
+const db = require("./models")
 
 const authRoutes = require("./routes/auth")
 const messageRoutes = require("./routes/messages")
@@ -26,6 +27,8 @@ app.use(function errorHandler(error, req, res, next){
     }
   })
 })
+
+db.Opening.create({title: 'Dog Walker', pay: '$15/hr', timeEstimate: '2 hours', description: 'Walk my 4 dogs', employer: '5c9718a7c8c4df4e22aa6109'})
 
 app.listen(8081, function(){
   console.log("Starting on port 8081")
