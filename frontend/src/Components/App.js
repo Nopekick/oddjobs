@@ -4,11 +4,7 @@ import Navbar from './Navbar/navbar'
 import Search from './Search/search'
 import SignIn from './SignIn/signin'
 import SignUp from './SignUp/signup'
-<<<<<<< HEAD
 import Bottom from './bottom/bottom'
-=======
-import Bottom from './Bottom/bottom'
->>>>>>> e16f2241ebc7beb3f27eef74aa83edbd57adb94b
 import OpenRequest from './OpenRequest/openrequest'
 import Homepage from './Homepage/homepage'
 import "../index.css"
@@ -19,11 +15,17 @@ class App extends Component {
     super(props)
     this.state = {
         isAuthenticated: false,
+        category: ''
     }
   }
 
   userLoggedIn = () => {
     this.setState({ isAuthenticated: true})
+  }
+
+  setCategory = (category) => {
+    this.setState({category: category})
+    console.log(category)
   }
 
   logout = () => {
@@ -35,19 +37,12 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Navbar logout={this.logout} isAuthenticated={this.state.isAuthenticated}/>
+        <Navbar cat={this.state.category} logout={this.logout} isAuthenticated={this.state.isAuthenticated}/>
         <Switch>
-          <Route path="/signup" component={()=> <SignUp isAuthenticated={this.state.isAuthenticated} signIn={this.userLoggedIn} /> } />
-<<<<<<< HEAD
-          <Route path="/signin" component={()=> <SignIn signIn={this.userLoggedIn} /> } />
+          <Route path="/signup" component={()=> <SignUp set={this.setCategory} isAuthenticated={this.state.isAuthenticated} signIn={this.userLoggedIn} /> } />
+          <Route path="/signin" component={()=> <SignIn set={this.setCategory} signIn={this.userLoggedIn} /> } />
           <Route path="/employer/request" component={()=> <OpenRequest />} />
           <Route path="/job-openings" component={()=> <Search  />} />
-=======
-          <Route path="/signin" component={()=> <SignIn /> } />
-          <Route path="/students" component={()=> <Search category="student" />} />
-          <Route path="/employers" component={()=> <Search category="employer" />} />
-          <Route path="/employer/request" component={()=> <OpenRequest />} />
->>>>>>> e16f2241ebc7beb3f27eef74aa83edbd57adb94b
           <Route path="/" component={()=> <Homepage  />} />
         </Switch>
         <Bottom/>

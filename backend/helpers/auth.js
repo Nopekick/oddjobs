@@ -4,11 +4,11 @@ const db = require('../models');
 exports.signin = async function(req, res, next){
   try{
     let user = await db.User.findOne({email: req.body.email});
-    let {_id, email} = user
+    let {_id, email, category} = user
     let isMatch = await user.comparePassword(req.body.password)
 
     if(isMatch){
-      let token = jwt.sign({_id,email},"tsdlkfjslkjewlkjf458u09fdvfvdg90efnlkndslkvndflv9")
+      let token = jwt.sign({_id,email, category},"tsdlkfjslkjewlkjf458u09fdvfvdg90efnlkndslkvndflv9")
       return res.status(200).json({
         token
       })
@@ -24,8 +24,8 @@ exports.signin = async function(req, res, next){
 exports.signup = async function(req, res, next){
   try{
     let user = await db.User.create(req.body)
-    let {_id, email} = user
-    let token = jwt.sign({_id,email}, "tsdlkfjslkjewlkjf458u09fdvfvdg90efnlkndslkvndflv9")
+    let {_id, email, category} = user
+    let token = jwt.sign({_id,email, category}, "tsdlkfjslkjewlkjf458u09fdvfvdg90efnlkndslkvndflv9")
 
     return res.status(200).json({token})
   } catch(err){
