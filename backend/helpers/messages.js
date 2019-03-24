@@ -52,9 +52,16 @@ exports.getAllEmployers = async function(req, res, next){
 }
 
 exports.createOpening = async function(req, res, next){
-  db.Opening.create(req.body).then((opening)=>{
-    return res.status(200).json({Message: 'created job opening'})
-  }).catch((err)=>{
-      next({message: err, status: 400})
-  })
+  if (req.headers.authorization && req.headers.authorization.split(' ')[0] === 'Bearer'){
+    const token = req.headers.authorization.split(" ")[1]
+    let decoded = jwt.decode(token)
+    req.body.employer = decoded._id
+
+    db.Opening.create(req.body).then((opening)=>{
+      return res.status(200).json({Message: 'created job opening'})
+    }).catch((err)=>{
+        next({message: err, status: 400})
+    })
+  }
+  next({message: 'Did not work', status: 400})
 }

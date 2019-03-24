@@ -16,6 +16,9 @@ const openingSchema = new mongoose.Schema({
   },
   timeEstimate: {
     type: String
+  },
+  cat: {
+    type: String
   }
 })
 
