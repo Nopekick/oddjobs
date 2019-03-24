@@ -17,9 +17,6 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  age: {
-    type: Number
-  },
   inbox: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Message'
