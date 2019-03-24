@@ -4,15 +4,9 @@ import Navbar from './Navbar/navbar'
 import Search from './Search/search'
 import SignIn from './SignIn/signin'
 import SignUp from './SignUp/signup'
-<<<<<<< HEAD
 import Bottom from './Bottom/bottom'
 import Homepage from './Homepage/homepage'
 import "../index.css"
-=======
-import Bottom from './bottom/bottom'
-import Homepage from './Homepage/homepage'
-import {setTokenHeader} from "../service.js"
->>>>>>> df4d52b5d429a4bc5397879f7ec524cc2a7c2a1c
 
 
 class App extends Component {
