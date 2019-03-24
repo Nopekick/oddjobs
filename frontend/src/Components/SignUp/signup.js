@@ -73,7 +73,7 @@ render(){
           <div id="selectdiv">
             <label>
               <select id="chooser">
-                <option selected> Select your position: </option>
+                <option selected> Select your role: </option>
                 <option> Employer </option>
                 <option> Employee </option>
               </select>
