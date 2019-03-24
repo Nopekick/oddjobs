@@ -15,6 +15,7 @@ class Navbar extends React.Component {
                                 <Link to="/"><img className="image" src={ require('./otter-md.png') } alt="otter you glad you chose us"/></Link>
                                 <Link to="/"> OdderJobs </Link>
                                 <Link to="/job-openings"> Job Openings </Link>
+                                <Link to="/inbox"> Messages </Link>
                                 <Link to="/employer/request"> Request Work</Link>
                                 <a onClick={this.props.logout}> Logout </a>
                               </div>)

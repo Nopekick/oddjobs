@@ -7,6 +7,10 @@ const messageSchema = new mongoose.Schema({
   },
   content: {
     type: String
+  },
+  recipient: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
   }
 })
 

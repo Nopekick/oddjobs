@@ -28,7 +28,10 @@ app.use(function errorHandler(error, req, res, next){
   })
 })
 
-//db.Opening.create({title: 'Tutor', pay: '$23/hr', timeEstimate: '1 hour', description: 'Help my son with calculus and proofread his essays', employer: '5c9718a7c8c4df4e22aa6109'})
+//db.Opening.create({title: 'Tutor', pay: '$23/hr', timeEstimate: '1 hour'
+//, description: 'Help my son with calculus and proofread his essays', employer: '5c9718a7c8c4df4e22aa6109'})
+
+//db.Message.create({sender: '5c971186c399814c3ca05941', recipient: '5c9718a7c8c4df4e22aa6109', content: 'I was very interested in baby sitting your kid. '})
 
 app.listen(8081, function(){
   console.log("Starting on port 8081")

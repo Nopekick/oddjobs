@@ -24,12 +24,19 @@ exports.getUserInfo = async function(req, res, next){
 }
 
 exports.getMessages = async function(req, res, next){
-  db.User.findById(req.params.id).populate('inbox').exec()
-  .then((user)=>{
-    return res.status(200).json({user: user.inbox})
-  }).catch((err)=>{
-      next({message: err, status: 400})
-  })
+  if (req.headers.authorization && req.headers.authorization.split(' ')[0] === 'Bearer'){
+    const token = req.headers.authorization.split(" ")[1]
+    let decoded = jwt.decode(token)
+
+    db.Message.find({recipient: decoded._id}).populate('sender').exec()
+    .then((messages)=>{
+      console.log("reached inside of message.find")
+      return res.status(200).json({messages})
+    }).catch((err)=>{
+        next({message: err, status: 407})
+    })
+  }
+  next({message: 'Did not work', status: 405})
 }
 
 
