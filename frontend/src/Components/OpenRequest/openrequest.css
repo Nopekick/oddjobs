@@ -34,8 +34,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   flex-direction: column;
   height: 100px;
   width: 300px;
-
 }
+
 
 hr {
   color: black;
@@ -111,4 +111,8 @@ hr {
   border: 1px solid #cccccc;
   -ms-word-break: normal;
   word-break: normal;
+}
+#request{
+  
+  flex-direction: row;
 }
