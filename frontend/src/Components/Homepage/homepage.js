@@ -11,7 +11,7 @@ class Homepage extends Component {
 render(){
   return (
     <div id="homepage">
-      <img id="otter" src="http://www.freakingnews.com/pictures/8000/OTTER--8241.jpg"/>
+      <img id="otter" src={ require('./WhyIOtter.jpg') }/>
       <div id="box1">
         <h1 id="title"> ODDER JOBS </h1>
         <h3 id="info"> Odd jobs, internships, and voluneer opportunities for youth. </h3>
