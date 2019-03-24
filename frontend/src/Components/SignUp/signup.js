@@ -76,11 +76,3 @@ render(){
 }
 
 export default withRouter(Signup);
-
-
-
-/*
-function signup(props) {
-  return <h1>Hello world</h1>;
-}
-*/

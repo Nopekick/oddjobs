@@ -20,10 +20,12 @@ font-size: 100%;
 font: inherit;
 vertical-align: baseline;
 }
+
 .topnav{
   height: 40px;
   font-size:30px;
   display: flex;
+  justify-content: space-around;
   text-align: center;
 }
 a{

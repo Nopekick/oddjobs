@@ -8,10 +8,10 @@ class Navbar extends React.Component {
           return <div className="topnav">
                   <img className="image" src={ require('./otter-md.png') } alt="otter you glad you chose us"/>
                   <Link to="/"> OdderJobs </Link>
-                  <Link to="/about"> About us </Link>
+                  <Link to="/employees"> Employers </Link>
+                  <Link to="/students"> Prospective Employees </Link>
                   <Link to="/signin"> Sign in </Link>
                   <Link to="/signup"> Sign up </Link>
-                  <img className="profilePic" src="" alt=""/>
                 </div>
   }
 }
