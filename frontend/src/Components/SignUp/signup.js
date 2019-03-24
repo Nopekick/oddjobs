@@ -80,17 +80,10 @@ render(){
           </div>
           <div id="selectdiv">
             <label>
-<<<<<<< HEAD
-              <select id="chooser">
-                <option selected> Select your role: </option>
-                <option> Employer </option>
-                <option> Employee </option>
-=======
               <select value={this.state.category} onChange={this.handleSelect} name="category" id="chooser">
                 <option selected> Select your position: </option>
                 <option value="employer"> Employer </option>
                 <option value="worker"> Employee </option>
->>>>>>> df4d52b5d429a4bc5397879f7ec524cc2a7c2a1c
               </select>
             </label>
           </div>
