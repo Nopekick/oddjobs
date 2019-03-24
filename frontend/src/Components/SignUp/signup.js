@@ -44,17 +44,25 @@ render(){
         <h1 id="signup"> Sign Up </h1>
         <form onSubmit={this.handleSubmit}>
         <div id="forms">
-          <label className="text">First Name</label>
-          <input onChange={this.handleChange} type = "text" name = "fname" placeholder="First Name"/>
-
-          <label className="text">Last Name</label>
-          <input onChange={this.handleChange} type = "text" name = "lname" placeholder="Enter your last name..."/>
-
-          <label className="text">Email</label>
-          <input onChange={this.handleChange} type = "text" name="email" placeholder="email"/>
-
-          <label className="text">Password</label>
-          <input onChange={this.handleChange} type = "password" name="password" placeholder="password"/>
+          <div className="line">
+            <label className="text">First Name</label>
+            <input onChange={this.handleChange} type = "text" name = "fname" placeholder="First Name"/>
+          </div>
+          <hr/>
+          <div className="line">
+            <label className="text">Last Name</label>
+            <input onChange={this.handleChange} type = "text" name = "lname" placeholder="Enter your last name..."/>
+          </div>
+          <hr/>
+          <div className="line">
+            <label className="text">Email</label>
+            <input onChange={this.handleChange} type = "text" name="email" placeholder="email"/>
+          </div>
+          <hr/>
+          <div className="line">
+            <label className="text">Password</label>
+            <input onChange={this.handleChange} type = "password" name="password" placeholder="password"/>
+          </div>
 
           <button type="submit">Sign Up </button>
           <p>Already have an account? <Link to="/signin">Sign in</Link></p>
