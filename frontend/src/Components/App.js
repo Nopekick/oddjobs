@@ -7,10 +7,15 @@ import SignUp from './SignUp/signup'
 <<<<<<< HEAD
 import Bottom from './Bottom/bottom'
 import Homepage from './Homepage/homepage'
+<<<<<<< HEAD
+=======
+import "../index.css"
+>>>>>>> 935de13a9983f1f478b69dee6e7cfdebe50ad027
 =======
 import Bottom from './bottom/bottom'
 import Homepage from './Homepage/homepage'
 import {setTokenHeader} from "../service.js"
+>>>>>>> df4d52b5d429a4bc5397879f7ec524cc2a7c2a1c
 
 >>>>>>> df4d52b5d429a4bc5397879f7ec524cc2a7c2a1c
 
