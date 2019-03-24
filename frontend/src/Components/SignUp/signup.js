@@ -40,25 +40,25 @@ handleSubmit(e){
 
 render(){
   return (
-    <div className="signin">
+    <div id="signups">
         <h1 id="signup"> Sign Up </h1>
-          <form onSubmit={this.handleSubmit}>
-                <label>First Name</label>
-                <input onChange={this.handleChange} type = "text" name = "fname" placeholder="First Name"/>
+        <form onSubmit={this.handleSubmit}>
+          <label>First Name</label>
+          <input onChange={this.handleChange} type = "text" name = "fname" placeholder="First Name"/>
 
-                <label>Last Name</label>
-                <input onChange={this.handleChange} type = "text" name = "lname" placeholder="Enter your last name..."/>
+          <label>Last Name</label>
+          <input onChange={this.handleChange} type = "text" name = "lname" placeholder="Enter your last name..."/>
 
-                <label>Email</label>
-                <input onChange={this.handleChange} type = "text" name="email" placeholder="email"/>
+          <label>Email</label>
+          <input onChange={this.handleChange} type = "text" name="email" placeholder="email"/>
 
-                <label>Password</label>
-                <input onChange={this.handleChange} type = "password" name="password" placeholder="password"/>
+          <label>Password</label>
+          <input onChange={this.handleChange} type = "password" name="password" placeholder="password"/>
 
-                 <button type="submit">Sign Up </button>
-                <p>Already have an account? <Link to="/signin">Sign in</Link></p>
-            </form>
-         </div>
+          <button type="submit">Sign Up </button>
+          <p>Already have an account? <Link to="/signin">Sign in</Link></p>
+        </form>
+    </div>
  )
 }
 
