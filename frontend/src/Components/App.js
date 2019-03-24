@@ -4,11 +4,8 @@ import Navbar from './Navbar/navbar'
 import Search from './Search/search'
 import SignIn from './SignIn/signin'
 import SignUp from './SignUp/signup'
-
-import Bottom from './bottom/bottom'
+import Bottom from './Bottom/bottom'
 import Homepage from './Homepage/homepage'
-
-import "../index.css"
 
 class App extends Component {
   constructor(props){
@@ -29,6 +26,7 @@ class App extends Component {
           <Route path="/employers" component={()=> <Search category="employer" />} />
           <Route path="/" component={()=> <Homepage  />} />
         </Switch>
+        <Bottom/>
       </div>
     );
   }
