@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import "./inbox.css"
 import {apiCall,setTokenHeader} from "../../service"
 import {Link, Redirect, withRouter} from 'react-router-dom'
 import axios from 'axios'
@@ -14,8 +15,9 @@ class Inbox extends Component {
 
  componentDidMount(){
    apiCall("get", 'http://localhost:8081/api/m/user/messages')
-   .then((messages)=>{
+   .then(({messages})=>{
      console.log("inside of componentdidmount")
+     console.log(messages)
      this.setState({messages})
    }).catch((err)=>{
       console.log("catch of componentdidmount")
@@ -23,24 +25,33 @@ class Inbox extends Component {
    })
  }
 
-  render() {
-      // let messages = this.state.messages.map((message, index)=>{
-      //   let {title, description, timeEstimate, pay, employer} = message
-      //   return <div key={message._id}>
-      //     <div >
-      //
-      //       <Link id="link2" to="/user/"> Student's profile</Link>
-      //     </div>
-      //   </div>
-      // })
+render(){
+ let messageList = this.state.messages.map((message, index)=>{
+    let {content, recipient, sender} = message
+    let {category, email, fname, inbox, interest, lname, wantJobs, _id} = sender
+    let link = `/user/${_id}`
+    return <div key={message._id}>
+      <div id="message">
+        <div id="text">
+          <h3 id="email"> {fname} {lname}: {email} </h3>
+          <p id="content"> {content} </p>
+        </div>
+        <div id="divbutton">
+          <p id="buttontext"> See Profile </p>
+          <Link id="link2" to={link}><span id="span1"></span></Link>
+        </div>
+      </div>
+    </div>
+  })
 
   return (
-    <div >
-      <h2> hello </h2>
+    <div id="allmessages">
+      {messageList}
     </div>
     );
   }
 }
+
 
 
 

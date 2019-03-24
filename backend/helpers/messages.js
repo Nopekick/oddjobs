@@ -3,15 +3,21 @@ const db = require('../models');
 
 //body should contain sender name, sender email, content, recipient name
 exports.sendMessage = async function(req, res, next){
-  let message = db.Message.create(req.body)
-  db.User.findById(req.params.recipientId)
-  .then((user)=>{
-    user.inbox.push(message)
-    user.save()
-    return res.status(200).json({'Message': 'Message Sent'})
-  }).catch((err)=>{
-      next({message: err, status: 400})
-  })
+  if (req.headers.authorization && req.headers.authorization.split(' ')[0] === 'Bearer'){
+    const token = req.headers.authorization.split(" ")[1]
+    let decoded = jwt.decode(token)
+
+    let recipient = req.params.recipientId;
+    let sender = decoded._id;
+    let content = req.body.content;
+    db.Message.create({recipient, sender, content}).then(()=>{
+      return res.status(200).json({Message: 'created job opening'})
+    }).catch((err)=>{
+        next({message: err, status: 400})
+    })
+  } else {
+    next({message: 'Did not work', status: 400})
+  }
 }
 
 exports.getUserInfo = async function(req, res, next){
@@ -35,8 +41,10 @@ exports.getMessages = async function(req, res, next){
     }).catch((err)=>{
         next({message: err, status: 407})
     })
+  } else{
+    next({message: 'Did not work', status: 405})
   }
-  next({message: 'Did not work', status: 405})
+
 }
 
 

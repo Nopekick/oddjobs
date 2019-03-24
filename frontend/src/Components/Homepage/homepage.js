@@ -14,7 +14,7 @@ render(){
       <img id="otter" src={ require('./WhyIOtter.jpg') }/>
       <div id="box1">
         <h1 id="title"> ODDER JOBS </h1>
-        <h3 id="info"> Odd jobs, internships, and voluneer opportunities for youth. </h3>
+        <h3 id="info"> Odd jobs, internships, and voluneer opportunities for students. </h3>
         <button id="clicky" type="submit">Get to work!</button>
       </div>
     </div>

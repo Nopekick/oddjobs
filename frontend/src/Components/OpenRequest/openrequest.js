@@ -22,6 +22,12 @@ class OpenRequest extends Component {
     this.setState({[e.target.name]: e.target.value})
   }
 
+  componentWillMount(){
+    if(!this.props.isAuthenticated || !this.props.category==='employer'){
+      this.props.history.push("/job-openings")
+    }
+  }
+
 
 handleSubmit(e){
   e.preventDefault()

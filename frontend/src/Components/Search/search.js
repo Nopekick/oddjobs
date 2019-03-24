@@ -25,14 +25,15 @@ class Search extends Component {
   render() {
       let jobList = this.state.jobs.map((job, index)=>{
         let {title, description, timeEstimate, pay, employer} = job
-        let {fname, lname} = employer
+        let {fname, lname, _id} = employer
+        let link = `/contact/${_id}`
         return <div key={job._id}>
           <div id="job">
             <h1 id="jobname">{title} </h1>
             <em id="fill"> offered by <em id="name">{fname} {lname}</em></em>
             <h2 id="pay"> ~ {timeEstimate},  {pay} </h2>
             <h2 id="desc"> Job description: {description}</h2>
-            <Link id="link2" to="/signin"><span id="span1"></span></Link>
+            <Link id="link2" to={link}><span id="span1"></span></Link>
           </div>
         </div>
       })
