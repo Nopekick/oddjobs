@@ -5,16 +5,8 @@ import Navbar from './Navbar/navbar'
 import Search from './Search/search'
 import SignIn from './SignIn/signin'
 import SignUp from './SignUp/signup'
-<<<<<<< HEAD
 import bottom from './bottom/bottom'
-=======
-import Homepage from "./Homepage/homepage"
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 5f21d8d0e2dfca5c067a4f96e99eb6312ea0ddae
->>>>>>> ebcc6a6c825e5a506bab9ba772d8f91395080ef8
+import Homepage from '.Homepage/homepage'
 import "../index.css"
 
 class App extends Component {
@@ -29,10 +21,6 @@ class App extends Component {
     return (
       <div>
         <Navbar/>
-<<<<<<< HEAD
-        <SignIn/>
-        <bottom/>
-=======
         <Switch>
           <Route path="/signup" component={()=> <SignUp /> } />
           <Route path="/signin" component={()=> <SignIn /> } />
@@ -40,7 +28,6 @@ class App extends Component {
           <Route path="/employers" component={()=> <Search category="employer" />} />
           <Route path="/" component={()=> <Homepage  />} />
         </Switch>
->>>>>>> ebcc6a6c825e5a506bab9ba772d8f91395080ef8
       </div>
     );
   }
