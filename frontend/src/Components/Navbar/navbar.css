@@ -27,6 +27,7 @@ vertical-align: baseline;
   display: flex;
   justify-content: space-around;
   text-align: center;
+  min-width:300px;
 }
 a{
   margin: 0;
