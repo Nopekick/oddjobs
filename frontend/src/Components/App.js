@@ -4,7 +4,7 @@ import Navbar from './Navbar/navbar'
 import Search from './Search/search'
 import SignIn from './SignIn/signin'
 import SignUp from './SignUp/signup'
-import Bottom from './Bottom/bottom'
+import Bottom from './bottom/bottom'
 import OpenRequest from './OpenRequest/openrequest'
 import Homepage from './Homepage/homepage'
 import "../index.css"
@@ -15,11 +15,17 @@ class App extends Component {
     super(props)
     this.state = {
         isAuthenticated: false,
+        category: ''
     }
   }
 
   userLoggedIn = () => {
     this.setState({ isAuthenticated: true})
+  }
+
+  setCategory = (category) => {
+    this.setState({category: category})
+    console.log(category)
   }
 
   logout = () => {
@@ -31,13 +37,12 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Navbar/>
+        <Navbar cat={this.state.category} logout={this.logout} isAuthenticated={this.state.isAuthenticated}/>
         <Switch>
-          <Route path="/signup" component={()=> <SignUp isAuthenticated={this.state.isAuthenticated} signIn={this.userLoggedIn} /> } />
-          <Route path="/signin" component={()=> <SignIn /> } />
-          <Route path="/students" component={()=> <Search category="student" />} />
-          <Route path="/employers" component={()=> <Search category="employer" />} />
+          <Route path="/signup" component={()=> <SignUp set={this.setCategory} isAuthenticated={this.state.isAuthenticated} signIn={this.userLoggedIn} /> } />
+          <Route path="/signin" component={()=> <SignIn set={this.setCategory} signIn={this.userLoggedIn} /> } />
           <Route path="/employer/request" component={()=> <OpenRequest />} />
+          <Route path="/job-openings" component={()=> <Search  />} />
           <Route path="/" component={()=> <Homepage  />} />
         </Switch>
         <Bottom/>
@@ -52,4 +57,4 @@ class App extends Component {
 
 
 
-export default App;
+export default withRouter(App);

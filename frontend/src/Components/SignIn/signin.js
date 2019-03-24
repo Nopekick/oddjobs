@@ -3,6 +3,8 @@ import {Link, Redirect, withRouter} from 'react-router-dom'
 import "./signin.css"
 import {apiCall,setTokenHeader} from "../../service"
 import axios from 'axios'
+import jwt_decode from 'jwt-decode'
+
 
 
 class Signup extends Component {
@@ -25,6 +27,7 @@ handleSubmit(e){
     setTokenHeader(token)
     localStorage.jwtToken = token
     this.props.signIn()
+    this.props.set(jwt_decode(token).category)
     console.log("signed in")
     console.log(token)
     this.props.history.push('/job-openings')
