@@ -9,12 +9,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   background: transparent;
 }
 
-#signups {
+#ninecup {
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 500px;
-  width: 350px;
+  height: 400px;
+  width: 600px;
   background-color: whites;
   border-radius: 1%;
   border: 1px solid black;
@@ -28,13 +28,20 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   justify-content: space-between;
 }
 
-#forms {
+#dorms {
   display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   height: 100px;
   width: 300px;
+  margin-top: 70px;
+  margin-right: 250px;
 }
+.textbox{
+  height: 150px;
+  margin: 12px;
+}
+
 
 
 hr {
@@ -42,7 +49,7 @@ hr {
   width: 100%;
 }
 
-.text {
+.checks {
   margin-left: 10px;
   font-size: 120%;
 }
@@ -52,16 +59,18 @@ hr {
   border: 1px solid black;
   padding: 5px;
 }
+.textbox{
+  width: 10px;
+}
 
 #submit {
-  align-self: center;
   background-color: inherit;
   border-radius: 6px;
   border: 1px solid black;
-  margin: auto;
   margin-top: 30px;
+  margin-left:90px;
   width: 120px;
-  height: 100px;
+  height: 30px;
   color: white;
   background-color: black;
   font-size: 100%;
@@ -113,6 +122,6 @@ hr {
   word-break: normal;
 }
 #request{
-  
+  margin: auto;
   flex-direction: row;
 }
