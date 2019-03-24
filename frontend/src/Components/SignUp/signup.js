@@ -43,20 +43,22 @@ render(){
     <div id="signups">
         <h1 id="signup"> Sign Up </h1>
         <form onSubmit={this.handleSubmit}>
-          <label>First Name</label>
+        <div id="forms">
+          <label className="text">First Name</label>
           <input onChange={this.handleChange} type = "text" name = "fname" placeholder="First Name"/>
 
-          <label>Last Name</label>
+          <label className="text">Last Name</label>
           <input onChange={this.handleChange} type = "text" name = "lname" placeholder="Enter your last name..."/>
 
-          <label>Email</label>
+          <label className="text">Email</label>
           <input onChange={this.handleChange} type = "text" name="email" placeholder="email"/>
 
-          <label>Password</label>
+          <label className="text">Password</label>
           <input onChange={this.handleChange} type = "password" name="password" placeholder="password"/>
 
           <button type="submit">Sign Up </button>
           <p>Already have an account? <Link to="/signin">Sign in</Link></p>
+        </div>
         </form>
     </div>
  )

@@ -10,11 +10,20 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 #signups {
-  align-self: center;
+  align-items: center;
   display: flex;
   flex-direction: column;
   height: 500px;
   width: 500px;
-  background-color: gray;
-  border-radius: 5%;
+  background-color: #EEEEEE;
+  border-radius: 1%;
+  border: 1px solid black;
+}
+
+#forms {
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+
 }
