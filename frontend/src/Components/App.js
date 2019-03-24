@@ -34,8 +34,7 @@ class App extends Component {
         <Switch>
           <Route path="/signup" component={()=> <SignUp isAuthenticated={this.state.isAuthenticated} signIn={this.userLoggedIn} /> } />
           <Route path="/signin" component={()=> <SignIn /> } />
-          <Route path="/students" component={()=> <Search category="student" />} />
-          <Route path="/employers" component={()=> <Search category="employer" />} />
+          <Route path="/job-openings" component={()=> <Search  />} />
           <Route path="/" component={()=> <Homepage  />} />
         </Switch>
         <Bottom/>

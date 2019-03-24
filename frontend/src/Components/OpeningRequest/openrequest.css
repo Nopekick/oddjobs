@@ -1,0 +1,114 @@
+//css reset
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+#signups {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  width: 350px;
+  background-color: whites;
+  border-radius: 1%;
+  border: 1px solid black;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.line {
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+}
+
+#forms {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100px;
+  width: 300px;
+
+}
+
+hr {
+  color: black;
+  width: 100%;
+}
+
+.text {
+  margin-left: 10px;
+  font-size: 120%;
+}
+
+.input {
+  margin-right: 10px;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+#submit {
+  align-self: center;
+  background-color: inherit;
+  border-radius: 6px;
+  border: 1px solid black;
+  margin: auto;
+  margin-top: 30px;
+  width: 120px;
+  height: 100px;
+  color: white;
+  background-color: black;
+  font-size: 100%;
+  font-weight: 500;
+  transition: all .1s ease-in-out;
+}
+
+#submit:hover {
+  transform: scale(1.04);
+}
+
+#link1 {
+  color: #0b3b89;
+  float: left;
+}
+
+#things {
+  margin-top: 16px;
+  color: black;
+}
+
+#selectdiv {
+  align-items: center;
+  margin-top: 20px;
+}
+
+#chooser::-ms-expand {
+  display: none;
+}
+
+#selectdiv select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  height: 30px;
+  float: right;
+  margin: 5px 0px;
+  padding: 0px 24px;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #333;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  -ms-word-break: normal;
+  word-break: normal;
+}

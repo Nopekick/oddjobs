@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import "./search.css"
 import {apiCall,setTokenHeader} from "../../service"
 import {Link, Redirect, withRouter} from 'react-router-dom'
 
@@ -26,16 +27,19 @@ class Search extends Component {
         let {title, description, timeEstimate, pay, employer} = job
         let {fname, lname} = employer
         return <div key={job._id}>
-          <h1>{title}<h2> offered by <em>{fname} {lname}</em></h2></h1>
-          <h2> Approximately {timeEstimate} for {pay} </h2>
-          <h2> Description: {description}</h2>
+          <div id="job">
+            <h1 id="jobname">{title} </h1>
+            <em id="fill"> offered by <em id="name">{fname} {lname}</em></em>
+            <h2 id="pay"> ~ {timeEstimate},  {pay} </h2>
+            <h2 id="desc"> Job description: {description}</h2>
+            <Link id="link2" to="/signin"><span id="span1"></span></Link>
+          </div>
         </div>
       })
 
   return (
-    <div>
-        <h1> Here </h1>
-          {jobList}
+    <div id="alljobs">
+      {jobList}
     </div>
     );
   }
