@@ -1,21 +1,18 @@
 import React, {Component} from 'react';
 import {Link, Redirect, withRouter} from 'react-router-dom'
-import "./signup.css"
+import "./openrequest.css"
 import {apiCall,setTokenHeader} from "../../service"
 import axios from 'axios'
 
 
-class Signup extends Component {
+class OpenRequest extends Component {
   constructor(props){
     super(props)
     this.state = {
-      fname: '',
-      lname: '',
-      email: '',
-      password: '',
-      category: '',
-      interest: '',
-      wantJobs: ''
+      title: '',
+      description: '',
+      pay: '',
+      timeEstimate: '',
     }
     this.handleSubmit = this.handleSubmit.bind(this)
   }
@@ -56,7 +53,7 @@ handleSubmit(e){
 
 render(){
   return (
-    <div id="signups">
+    <div id="">
         <h1 id="signup"> Sign Up </h1>
         <form onSubmit={this.handleSubmit}>
         <div id="forms">
@@ -88,19 +85,7 @@ render(){
               </select>
             </label>
           </div>
-          { this.state.category == "student" ? (
-            <div>
-              <div className="line">
-                <label className="text"> Interests</label>
-                <input className="input" onChange={this.handleChange} type = "text" name="interest" placeholder="Interests"/>
-              </div>
-              <hr/>
-              <div className="line">
-                <label className="text">Desired Jobs</label>
-                <input className="input" onChange={this.handleChange} type = "text" name="wantJobs" placeholder="Ex: Clean, Walk Dogs..."/>
-              </div>
-            </div>
-            ) : null}
+
 
 
 
@@ -115,4 +100,4 @@ render(){
 
 }
 
-export default withRouter(Signup);
+export default withRouter(OpenRequest);

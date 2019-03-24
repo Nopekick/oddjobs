@@ -4,16 +4,11 @@ import Navbar from './Navbar/navbar'
 import Search from './Search/search'
 import SignIn from './SignIn/signin'
 import SignUp from './SignUp/signup'
-import Bottom from './bottom/bottom'
+import Bottom from './Bottom/bottom'
 import Homepage from './Homepage/homepage'
-<<<<<<< HEAD
 import {setTokenHeader} from '../service.js'
 import "../index.css"
-=======
-import "../index.css"
-import {setTokenHeader} from "../service.js"
 
->>>>>>> 062482ca964ddf1aeedf6e2f053f5e616cf54149
 
 class App extends Component {
   constructor(props){
