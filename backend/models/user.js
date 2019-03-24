@@ -10,6 +10,9 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  category: {
+    type: String
+  }
   password: {
     type: String,
     required: true
@@ -17,9 +20,10 @@ const userSchema = new mongoose.Schema({
   age: {
     type: Number
   },
-  inbox: {
-
-  },
+  inbox: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Message'
+  }],
   bio: {
     type: String
   },
