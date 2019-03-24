@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 import {Switch, Route, withRouter} from 'react-router-dom'
 import Navbar from './Navbar/navbar'
+<<<<<<< HEAD
 
 import Search from './Search/search'
 import SignIn from './SignIn/signin'
 import SignUp from './SignUp/signup'
 
+=======
+import SignUp from './SignUp/signup'
+import SignIn from './SignIn/signin'
+import Homepage from './Homepage/homepage'
+>>>>>>> ecc3d11ac4f04f1d0aafa1b8cf996779e8d26cff
 import "../index.css"
 
 class App extends Component {

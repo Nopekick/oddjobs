@@ -1,0 +1,31 @@
+
+#homepage {
+  display: flex;
+  flex-direction: row;
+  height: 600px;
+  width: 1000px;
+}
+
+#box1 {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  width: 400px;
+}
+
+#otter {
+  margin: auto;
+  height: 400px;
+  width: 300px;
+  border-radius: 100px;
+}
+
+#title {
+  font-size: 400%;
+  text-align: center;
+}
+
+#info {
+  text-align: center;
+}
