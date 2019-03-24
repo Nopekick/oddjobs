@@ -12,15 +12,9 @@ class Search extends Component {
     }
   }
 
-<<<<<<< HEAD
- componentWillMount(){
-   apiCall("get", `http://localhost:8081/api/m/jobs/all`)
-   .then((jobs)=>{
-=======
  componentDidMount(){
    apiCall("get", 'http://localhost:8081/api/m/jobs/all')
    .then(({jobs})=>{
->>>>>>> d42f37e801fbe3838b723b73319561e8a1d5e259
      this.setState({jobs})
      console.log(jobs)
    }).catch((err)=>{
@@ -29,9 +23,6 @@ class Search extends Component {
  }
 
   render() {
-<<<<<<< HEAD
-
-=======
       let jobList = this.state.jobs.map((job, index)=>{
         let {title, description, timeEstimate, pay, employer} = job
         let {fname, lname} = employer
@@ -45,7 +36,6 @@ class Search extends Component {
           </div>
         </div>
       })
->>>>>>> d42f37e801fbe3838b723b73319561e8a1d5e259
 
   return (
     <div id="alljobs">
