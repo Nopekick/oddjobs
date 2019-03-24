@@ -26,20 +26,9 @@
   margin: 12px;
 }
 
-
 #submit {
-  background-color: inherit;
-  border-radius: 6px;
-  border: 1px solid black;
-  margin-top: 30px;
   margin-left:90px;
-  width: 120px;
   height: 30px;
-  color: white;
-  background-color: black;
-  font-size: 100%;
-  font-weight: 500;
-  transition: all .1s ease-in-out;
 }
 
 #submit:hover {
