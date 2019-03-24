@@ -54,45 +54,35 @@ handleSubmit(e){
 render(){
   return (
     <div id="request">
-        <h1 id="signup"> Sign Up </h1>
+        <h1 id="signup">Create Opening</h1>
         <form onSubmit={this.handleSubmit}>
         <div id="forms">
+
+        <div>
+
           <div className="line">
-            <label className="text">First Name</label>
-            <input className="input" onChange={this.handleChange} type = "text" name = "fname" placeholder="First Name"/>
+            <label className="text">Work Type</label>
+            <input className="input" onChange={this.handleChange} type = "text" name = "title" placeholder="baker"/>
           </div>
           <hr/>
           <div className="line">
-            <label className="text">Last Name</label>
-            <input className="input" onChange={this.handleChange} type = "text" name = "lname" placeholder="Last Name"/>
+            <label className="text">Per hour pay</label>
+            <input className="input" onChange={this.handleChange} type = "text" name="pay" placeholder="$0"/>
           </div>
           <hr/>
           <div className="line">
-            <label className="text">Email</label>
-            <input className="input" onChange={this.handleChange} type = "text" name="email" placeholder="Email"/>
+            <label className="text">Time needed</label>
+            <input className="input" onChange={this.handleChange} type = "text" name="timeEstimate" placeholder="hours:minutes"/>
           </div>
-          <hr/>
+          <button id="submit" type="submit">Submit </button>
+          </div>
+
           <div className="line">
-            <label className="text">Password</label>
-            <input className="input" onChange={this.handleChange} type = "password" name="password" placeholder="Password"/>
+            <label className="text">Description</label>
+            <textarea className="input" onChange={this.handleChange} type = "text" name = "description" placeholder="You will do..."/>
           </div>
-          <div id="selectdiv">
-            <label>
-              <select value={this.state.category} onChange={this.handleSelect} name="category" id="chooser">
-                <option> Select your position: </option>
-                <option value="employer"> Employer </option>
-                <option value="student"> Employee </option>
-              </select>
-            </label>
           </div>
 
-
-
-
-          <button id="submit" type="submit">Sign Up </button>
-          <span id="things">Already have an account? </span>
-          <Link id="link1" to="/signin">Sign in</Link>
-        </div>
         </form>
     </div>
  )

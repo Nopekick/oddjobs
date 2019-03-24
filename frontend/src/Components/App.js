@@ -5,6 +5,7 @@ import Search from './Search/search'
 import SignIn from './SignIn/signin'
 import SignUp from './SignUp/signup'
 import Bottom from './Bottom/bottom'
+import OpenRequest from './OpenRequest/openrequest'
 import Homepage from './Homepage/homepage'
 import "../index.css"
 import {setTokenHeader} from "../service.js"
@@ -36,6 +37,7 @@ class App extends Component {
           <Route path="/signin" component={()=> <SignIn /> } />
           <Route path="/students" component={()=> <Search category="student" />} />
           <Route path="/employers" component={()=> <Search category="employer" />} />
+          <Route path="/employer/request" component={()=> <OpenRequest />} />
           <Route path="/" component={()=> <Homepage  />} />
         </Switch>
         <Bottom/>
