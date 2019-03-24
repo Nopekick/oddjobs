@@ -6,16 +6,9 @@ import SignIn from './SignIn/signin'
 import SignUp from './SignUp/signup'
 import Bottom from './Bottom/bottom'
 import Homepage from './Homepage/homepage'
-<<<<<<< HEAD
-import {setTokenHeader} from '../service.js'
-import "../index.css"
-
-
-=======
 import "../index.css"
 import {setTokenHeader} from "../service.js"
 
->>>>>>> ebfd0424600d29d699fd688dc8ffdbf9f45c4c44
 class App extends Component {
   constructor(props){
     super(props)
